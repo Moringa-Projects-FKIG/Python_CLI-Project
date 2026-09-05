@@ -1,0 +1,1 @@
+"""Midnight Murder detective game."""

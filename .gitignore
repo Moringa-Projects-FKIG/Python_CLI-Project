@@ -1,0 +1,11 @@
+# Virtual environments
+.venv/
+.venv-*/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Runtime saves
+Midnight_murder/data/saves/*.json
+!Midnight_murder/data/saves/.gitkeep

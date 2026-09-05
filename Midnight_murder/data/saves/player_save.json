@@ -33,7 +33,12 @@
         "muddy footprints leading away from the scene",
         "a torn piece of a black glove"
     ],
-    "found_clues": [],
-    "player_name": "Alice",
+    "found_clues": [
+        "a silver button caught on the victim's coat",
+        "muddy footprints leading away from the scene",
+        "a threatening letter with no signature",
+        "a stopped pocket watch showing the time of death"
+    ],
+    "player_name": "XOXO",
     "story_source": "built-in fallback"
 }
