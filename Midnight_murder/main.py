@@ -1,5 +1,5 @@
-from pages.Kennedy.game import Game
-from pages.Iman.investigation import Investigation
+from models.Kennedy.game import Game
+from models.Iman.investigation import Investigation
 
 
 RED = "\033[91m"
