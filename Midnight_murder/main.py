@@ -1,3 +1,5 @@
+import json
+
 from models.Kennedy.game import Game
 from models.Iman.investigation import Investigation
 
@@ -43,7 +45,7 @@ elif choice == "2":
         game = Game(Investigation.load())
         print(GREEN + "\nSaved investigation loaded." + RESET)
         game.menu()
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError, KeyError, TypeError):
         print(RED + "\nNo saved investigation found." + RESET)
 
 elif choice == "3":

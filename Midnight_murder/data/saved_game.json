@@ -1,0 +1,15 @@
+{
+    "killer": "Chris",
+    "clues": {
+        "Lobby": "Camera footage shows Chris walking toward the office at 11:42 PM.",
+        "Kitchen": "A poisoned drink ingredient was found near the serving area.",
+        "Office": "A letter shows Chris owed Hassan a large amount of money.",
+        "Garden": "A piece of silver tie fabric was found near the garden path."
+    },
+    "found": [
+        "A poisoned drink ingredient was found near the serving area."
+    ],
+    "interviewed": [
+        "Lance"
+    ]
+}

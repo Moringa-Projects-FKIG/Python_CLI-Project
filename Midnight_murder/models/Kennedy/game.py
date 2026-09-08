@@ -1,8 +1,8 @@
 import random
 
-from pages.Faith.suspects import SUSPECTS
-from pages.Gladys.clues import get_case_clues
-from pages.Iman.investigation import Investigation
+from models.Faith.suspect import SUSPECTS
+from models.Gladys.clues import get_case_clues
+from models.Iman.investigation import Investigation
 
 
 RED = "\033[91m"
@@ -14,7 +14,7 @@ RESET = "\033[0m"
 
 
 class Game:
-    def _init_(self, investigation=None):
+    def __init__(self, investigation=None):
         self.case = investigation or self.new_case()
 
     def new_case(self):

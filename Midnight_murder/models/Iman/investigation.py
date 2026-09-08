@@ -1,8 +1,12 @@
 import json
+from pathlib import Path
+
+
+SAVE_FILE = Path(__file__).resolve().parents[2] / "data" / "saved_game.json"
 
 
 class Investigation:
-    def _init_(self, killer, clues):
+    def __init__(self, killer, clues):
         self.killer = killer
         self.clues = clues
         self.found = []
@@ -24,11 +28,11 @@ class Investigation:
         print()
         print(f"--- Searching the {location} ---")
 
-        for clue in self.clues[location]:
-            print(f"- {clue}")
+        clue = self.clues[location]
+        print(f"- {clue}")
 
-            if clue not in self.found:
-                self.found.append(clue)
+        if clue not in self.found:
+            self.found.append(clue)
 
     def show_clues(self):
         print()
@@ -40,6 +44,17 @@ class Investigation:
             for clue in self.found:
                 print(f"- {clue}")
 
+    def accuse(self, suspect):
+        print()
+
+        if suspect == self.killer:
+            print(f"Correct. {suspect} is the murderer.")
+            return True
+
+        print(f"Wrong accusation. {suspect} is innocent.")
+        print(f"The murderer was {self.killer}.")
+        return False
+
     def save(self):
         data = {
             "killer": self.killer,
@@ -48,7 +63,7 @@ class Investigation:
             "interviewed": self.interviewed
         }
 
-        with open("data/saved_game.json", "w") as file:
+        with SAVE_FILE.open("w") as file:
             json.dump(data, file, indent=4)
 
         print()
@@ -56,7 +71,7 @@ class Investigation:
 
     @classmethod
     def load(cls):
-        with open("data/saved_game.json", "r") as file:
+        with SAVE_FILE.open("r") as file:
             data = json.load(file)
 
         game = cls(data["killer"], data["clues"])
