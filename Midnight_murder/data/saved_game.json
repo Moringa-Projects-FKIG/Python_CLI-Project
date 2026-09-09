@@ -1,13 +1,13 @@
 {
-    "killer": "Chris",
+    "killer": "Lance",
     "clues": {
-        "Lobby": "Camera footage shows Chris walking toward the office at 11:42 PM.",
-        "Kitchen": "A poisoned drink ingredient was found near the serving area.",
-        "Office": "A letter shows Chris owed Hassan a large amount of money.",
-        "Garden": "A piece of silver tie fabric was found near the garden path."
+        "Lobby": "Camera footage shows Lance leaving the kitchen shortly before 11:47 PM.",
+        "Kitchen": "A small poison bottle is missing from the kitchen cabinet.",
+        "Office": "A cup containing traces of poison was found beside Hassan's desk.",
+        "Garden": "A torn piece of white chef's jacket was found near the garden door."
     },
     "found": [
-        "A poisoned drink ingredient was found near the serving area."
+        "A small poison bottle is missing from the kitchen cabinet."
     ],
     "interviewed": [
         "Lance"
